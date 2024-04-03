@@ -62,7 +62,7 @@ def main():
 			for j in os.listdir(rootFile):
 				if j == 'pathname':
 					with open(os.path.join(rootFile, j), 'r') as file:
-						realPath = file.readline().strip()
+						realPath = file.readline(5_000_000).strip()
 				elif j == 'asset':
 					hasAsset = True
 
