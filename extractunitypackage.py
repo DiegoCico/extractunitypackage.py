@@ -47,7 +47,7 @@ def main():
 		tar = tarfile.open(input_file, 'r:gz')
 		tar.extractall(workingDir)
 		tar.close()
-		print(f"Extraction successful.")
+		print("Extraction successful.")
 	except Exception as e:
 		print(f"Error extracting {input_file}: {e}")
 		shutil.rmtree(workingDir)
